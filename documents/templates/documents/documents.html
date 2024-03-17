@@ -5,8 +5,9 @@ Documents list
 {% endblock %}
 
 {% block content %}
-<ul>
+<div class="document-all">
     {% for document in documents %}
+    <div class="document-element">
         <ul>
             <strong>Name:</strong> {{ document.name }} <br>
             <strong>Scope:</strong> {{ document.scope }} <br>
@@ -18,11 +19,12 @@ Documents list
                 <strong>Status:</strong> Not validated <br>
                 <form action="{% url 'validate' document.id %}" method="post">
                     {% csrf_token %}
-                    <button type="submit">Validate</button>
+                    <button class="button" type="submit">Validate</button>
                 </form>
             {% endif %}
         </ul>
-            
+    </div>
+    
     {% endfor %}
-</ul>
+</div>
 {% endblock %}

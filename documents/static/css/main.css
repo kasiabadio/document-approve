@@ -53,3 +53,29 @@ nav {
     margin: 0 auto;
 }
 
+.create-document {
+    height: 200px;
+    text-align: center; 
+    background-color: #b1cbad;
+}
+
+.document-all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.document-element {
+    width: 400px;
+    height: 200px;
+    background-color: #b1cbad;
+    border-radius: 15%;
+    text-align: center; 
+    border: 5px solid blanchedalmond;
+}
+
+.button {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
