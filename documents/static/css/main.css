@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+nav {
+    height: 60px;
+    background-color: #ddd;
+    text-align: center;
+    line-height: 60px;
+}
+
+.nav-items a {
+    padding: 0 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav-items a:hover {
+    color: #09f;
+}
+
+.header {
+    height: 400px;
+    text-align: center;
+    background-image: url('../images/DSC07846.JPG');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.flower-text {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    max-width: 600px;
+    margin: 0 auto;
+}
+

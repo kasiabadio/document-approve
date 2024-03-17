@@ -1,0 +1,28 @@
+{% extends 'documents/base.html' %}
+
+{% block title %}
+Documents list
+{% endblock %}
+
+{% block content %}
+<ul>
+    {% for document in documents %}
+        <ul>
+            <strong>Name:</strong> {{ document.name }} <br>
+            <strong>Scope:</strong> {{ document.scope }} <br>
+            <strong>Responsible Person:</strong> {{ document.responsible_person }} <br>
+            <strong>Accepting Person:</strong> {{ document.accepting_person }} <br>
+            {% if document.is_validated %}
+                <strong>Status:</strong> Validated <br>
+            {% else %}
+                <strong>Status:</strong> Not validated <br>
+                <form action="{% url 'validate' document.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Validate</button>
+                </form>
+            {% endif %}
+        </ul>
+            
+    {% endfor %}
+</ul>
+{% endblock %}

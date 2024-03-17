@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+    <script src="https://kit.fontawesome.com/0af5a16bf1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="flower-text">
+            <h1>create document and approve it</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Non nulla nesciunt unde omnis est fugit. Odit repudiandae magni quam ipsa!</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="wrapper">
+            <div class="nav-items">
+                <a href="{% url 'home' %}">home</a>
+                <a href="{% url 'create_document' %}">create document</a>
+                <a href="{% url 'documents' %}">documents</a>
+            </div>
+        </div>
+    </nav>
+    
+  
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>© 2024 Katarzyna Badio</p>
+    </footer>
+    
+</body>
+</html>
